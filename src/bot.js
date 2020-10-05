@@ -9,7 +9,7 @@ client.request = new (require("rss-parser"));
 client.config = require("../config/config.js");
 const PREFIX = ";"
 
-client.login(process.env.DISCORD_BOT_TOKEN);
+client.login(client.config.DISCORD_BOT_TOKEN);
 
 const isValidCommand = (message, cmdName) => message.content.toLowerCase().startsWith(PREFIX + cmdName);
 
